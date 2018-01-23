@@ -1,0 +1,11 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+  <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="taskInput"></textarea>
+  <p-button (onClick)="onSubmit()" label="Submit" ></p-button>
+
+</div>
+<div fxLayoutGap="coloumn" >
+  <div *ngFor="let task of taskList">
+    <app-task [task] ="task"></app-task>
+  </div>
+</div>
+
